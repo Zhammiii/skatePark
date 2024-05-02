@@ -1,5 +1,3 @@
-// registro.js
-
 const url = "http://localhost:3000";
 
 async function handleRegistro(event) {

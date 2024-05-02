@@ -4,4 +4,5 @@ const router = Router();
 
 router.post("/", handleRegistro);
 
+
 export default router;

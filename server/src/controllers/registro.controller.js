@@ -2,8 +2,6 @@ import { pool } from "../dbConfig.js";
 import path from "path"; 
 const __dirname = path.resolve();
 
-console.log(__dirname);
-
 export async function handleRegistro(req, res) {
     try {
         const { email, nombre, password, anos_experiencia, especialidad } = req.body;

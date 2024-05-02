@@ -9,7 +9,7 @@ const PORT = 3000;
 import routes from "./routes/index.routes.js";
 
 // Middleware para servir archivos estáticos
-export const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 app.use(express.static(path.join(__dirname, 'data')));
 
 // Configuración de middleware para carga de archivos
