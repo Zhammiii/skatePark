@@ -8,8 +8,7 @@ async function getAdmin() {
         const tablaParticipantes = document.getElementById('tabla-participantes');
         const tbody = tablaParticipantes.querySelector('tbody');
         data.forEach((participante, index) => {
-            const estadoCheckbox = participante.estado ? 'checked' : ''; // Determina si el checkbox debe estar marcado o no
-
+            const estadoCheckbox = participante.estado ? 'checked' : ''
             const fila = `
                 <tr>
                     <th scope="row">${index + 1}</th>

@@ -27,45 +27,47 @@
             <input
               class="form-control m-auto"
               disabled
-              value="tonyhawk@skate.com"
             />
           </div>
           <div class="form-group col-12 col-sm-6">
             <label>Nombre</label>
-            <input class="form-control m-auto" value="Tony Hawk" />
+            <input id="name"
+             class="form-control m-auto" />
           </div>
           <div class="form-group col-12 col-sm-6">
             <label>Password</label>
             <input
+            id="password"
               type="password"
               class="form-control m-auto"
-              value="12345678"
             />
           </div>
           <div class="form-group col-12 col-sm-6">
             <label>Repita la password</label>
             <input
+            name="repeat_password"
               type="password"
               class="form-control m-auto"
-              value="12345678"
             />
           </div>
           <div class="form-group col-12 col-sm-6">
             <label>Años de experiencia</label>
-            <input class="form-control m-auto" value="12" />
+            <input id="anos_experiencia" class="form-control m-auto"/>
           </div>
           <div class="form-group col-12 col-sm-6">
             <label>Especialidad</label>
-            <input class="form-control m-auto" value="Kickflip" />
+            <input id="especialidad" class="form-control m-auto" />
           </div>
         </div>
         <div class="mb-1">
-          <button class="btn btn-primary">Actualizar</button>
+          <button id="updatebtn" class="btn btn-primary">Actualizar</button>
         </div>
         <div>
-          <button class="btn btn-danger">Eliminar cuenta</button>
+          <button id="deletebtn" class="btn btn-danger">Eliminar cuenta</button>
         </div>
       </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/Participantes.js"></script>
   </body>
 </html>

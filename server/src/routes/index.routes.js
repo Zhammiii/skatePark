@@ -3,6 +3,7 @@ import registro from "./registro.routes.js";
 import getParticipantes  from "./participantes.routes.js";
 import getLogin from "./login.routes.js"
 import getAdmin from "./admin.routes.js"
+
 const router = Router();
 
 /* localhost:3000/   */
