@@ -20,9 +20,12 @@ async function handleRegistro(event) {
 
         const response = await axios.post(`${url}/Registro`, formData);
         console.log(response.data);
+        location.replace("/client/Login.html")
+        
+        
     } catch (error) {
         console.error(error);
     }
 }
 
-document.getElementById("registroForm").addEventListener("submit", handleRegistro);
+document.getElementById("registroBtn").addEventListener("click", handleRegistro);

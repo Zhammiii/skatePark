@@ -13,14 +13,14 @@ export async function handleRegistro(req, res) {
         foto.mv(`${__dirname}/data/${newFileName}`, async (err) => {
             if (err) {
                 console.log(err);
-                res.send("Ha ocurrido un error insesperado");
+                res.send("Ha ocurrido un error inesperado");
             } else {
                 try {
                     await pool.query(
                         'INSERT INTO skaters (email, nombre, password, anos_experiencia, especialidad, foto, estado) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',
                         [email, nombre, password, anos_experiencia, especialidad, newFileName, false]
                     );
-                    res.status(201).json({ message: 'Usuario registrado exitosamente' });
+                    res.send("agregado correctamente")
                 } catch (error) {
                     console.error(error);
                     res.status(500).json({ message: 'Error en el servidor' });
@@ -32,3 +32,4 @@ export async function handleRegistro(req, res) {
         res.status(500).json({ message: 'Error en el servidor' });
     }
 }
+
