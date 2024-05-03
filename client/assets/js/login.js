@@ -10,8 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
         `${url}/Login?email=${email}&password=${password}`
       );
       if (response.data.success) {
-        const token = response.data.token;
+        const { token } = response.data;
         localStorage.setItem("token", token);
+        localStorage.setItem("email", email); 
         location.replace("/client/Datos.html");
       } else {
         alert("Credenciales inválidas. Por favor, inténtalo de nuevo.");

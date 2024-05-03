@@ -3,6 +3,7 @@ import registro from "./registro.routes.js";
 import getParticipantes  from "./participantes.routes.js";
 import getLogin from "./login.routes.js"
 import getAdmin from "./admin.routes.js"
+import datosRoutes from "./datos.routes.js"
 
 const router = Router();
 
@@ -16,6 +17,7 @@ router.use("/Registro", registro);
 router.use("/index" , getParticipantes )
 router.use("/Login" , getLogin )
 router.use("/Admin" , getAdmin)
+router.use('/Datos', datosRoutes);
 
 
 export default router;
