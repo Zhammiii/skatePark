@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,63 +12,55 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-</head>
-<body>
+  </head>
+  <body>
     <h1>Skate Park</h1>
 
     <div class="py-4">
-      <h2>Datos del perfil</h2>
-      <hr class="w-50" />
+    <h2>Datos del perfil</h2>
+    <hr class="w-50" />
 
-      <form>
-        <div class="form-group row w-50 m-auto">
-          <div class="form-group col-12 col-sm-6">
-            <label>Email</label>
-            <input
-              id="email"
-              class="form-control m-auto"
-              disabled
-            />
-          </div>
-          <div class="form-group col-12 col-sm-6">
-            <label>Nombre</label>
-            <input id="name" class="form-control m-auto" />
-          </div>
-          <div class="form-group col-12 col-sm-6">
-            <label>Password</label>
-            <input
-              id="password"
-              type="password"
-              class="form-control m-auto"
-            />
-          </div>
-          <div class="form-group col-12 col-sm-6">
-            <label>Repita la password</label>
-            <input
-              id="repite_password"
-              name="repeat_password"
-              type="password"
-              class="form-control m-auto"
-            />
-          </div>
-          <div class="form-group col-12 col-sm-6">
-            <label>Años de experiencia</label>
-            <input id="anos_experiencia" class="form-control m-auto" />
-          </div>
-          <div class="form-group col-12 col-sm-6">
-            <label>Especialidad</label>
-            <input id="especialidad" class="form-control m-auto" />
-          </div>
+    <form>
+      <div class="form-group row w-50 m-auto">
+        <div class="form-group col-12 col-sm-6">
+          <label>Email</label>
+          <input id="email" class="form-control m-auto" disabled />
         </div>
-        <div class="mb-1">
-          <button id="updatebtn" class="btn btn-primary">Actualizar</button>
+        <div class="form-group col-12 col-sm-6">
+          <label>Nombre</label>
+          <input id="name" class="form-control m-auto" />
         </div>
-        <div>
-          <button id="deletebtn" class="btn btn-danger">Eliminar cuenta</button>
+        <div class="form-group col-12 col-sm-6">
+          <label>Password</label>
+          <input id="password" type="password" class="form-control m-auto" />
         </div>
-      </form>
-    </div>
+        <div class="form-group col-12 col-sm-6">
+          <label>Repita la password</label>
+          <input
+            id="repite_password"
+            name="repeat_password"
+            type="password"
+            class="form-control m-auto"
+          />
+        </div>
+        <div class="form-group col-12 col-sm-6">
+          <label>Años de experiencia</label>
+          <input id="anos_experiencia" class="form-control m-auto" />
+        </div>
+        <div class="form-group col-12 col-sm-6">
+          <label>Especialidad</label>
+          <input id="especialidad" class="form-control m-auto" />
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button id="updatebtn" class="btn btn-primary m-2">Actualizar</button>
+        <button id="deletebtn" class="btn btn-danger m-2">Eliminar cuenta</button>
+        <button id="logoutbtn" class="btn btn btn-secondary m-2">Cerrar sesión</button>
+      </div>
+    </form>
+  </div>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./assets/js/datos.js"></script>
-</body>
+  </body>
 </html>

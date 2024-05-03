@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import { pool } from "../dbConfig.js";
 
 const secretKey = 'credenciales';
-const tokenOptions = { expiresIn: '60s' }; 
+const tokenOptions = { expiresIn: '120s' }; 
 
 
 async function verificarCredenciales(email, password) {
