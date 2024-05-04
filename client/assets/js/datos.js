@@ -10,22 +10,22 @@ document.addEventListener("DOMContentLoaded", async () => {
   
     try {
       const response = await axios.get(
-        `${url}/Datos?email=${localStorage.getItem("email")}`,
+        `${url}/Datos?email=${localStorage.getItem("email")}&token=${localStorage.getItem("token")}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         }
       );
+      console.log(response)
       const data = response.data;
-  
       // Rellenar los campos del formulario con los datos del usuario
-      document.getElementById("email").value = data.email;
-      document.getElementById("name").value = data.nombre;
-      document.getElementById("password").value = data.password;
-      document.getElementById("repite_password").value = data.password;
-      document.getElementById("anos_experiencia").value = data.anos_experiencia;
-      document.getElementById("especialidad").value = data.especialidad;
+      document.getElementById("email").value = data.base.email;
+      document.getElementById("name").value = data.base.nombre;
+      document.getElementById("password").value = data.base.password;
+      document.getElementById("repite_password").value = data.base.password;
+      document.getElementById("anos_experiencia").value = data.base.anos_experiencia;
+      document.getElementById("especialidad").value = data.base.especialidad;
   
       // Evento para el botón de actualizar
       document

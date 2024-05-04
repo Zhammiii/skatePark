@@ -4,7 +4,6 @@ import { pool } from "../dbConfig.js";
 const secretKey = 'credenciales';
 const tokenOptions = { expiresIn: '120s' }; 
 
-
 async function verificarCredenciales(email, password) {
     const client = await pool.connect();
     try {
