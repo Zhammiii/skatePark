@@ -35,7 +35,6 @@ async function handleRegistro(event) {
         console.log(response.data);
         location.replace("/client/Login.html")
         
-        
     } catch (error) {
         console.error(error);
     }

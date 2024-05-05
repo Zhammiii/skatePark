@@ -23,7 +23,7 @@ export async function login(req, res) {
             const token = jwt.sign({ email }, secretKey, tokenOptions);
             res.status(200).json({ success: true, message: "Inicio de sesión exitoso", token });
         } else {
-            res.status(401).json({ success: false, message: "Credenciales inválidas" });
+            res.status(204).json({ success: false, message: "Credenciales inválidas" });
         }
     } catch (error) {
         console.error(error);
