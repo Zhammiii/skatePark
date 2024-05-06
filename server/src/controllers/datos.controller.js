@@ -68,6 +68,7 @@ export async function eliminarCuenta(req, res) {
         res.status(200).json({
           status: "Ok",
           message: "Gracias por la petición",
+          base: result.rows[0]
         });
       }
     });

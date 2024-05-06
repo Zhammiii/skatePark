@@ -23,6 +23,19 @@ async function handleRegistro(event) {
             return;
         }
 
+        // Validar que los años de experiencia sean números entre 0 y 99
+        const anosExpRegex = /^[0-9]{1,2}$/;
+        if (!anosExpRegex.test(anos_experiencia.value)) {
+            alert("Los años de experiencia deben ser números entre 0 y 99.");
+            return;
+        }
+
+        // Requerir todos los campos
+        if (!email.value || !nombre.value || !password.value || !repitePassword.value || !anos_experiencia.value || !especialidad.value || !foto.files[0]) {
+            alert("Todos los campos son requeridos.");
+            return;
+        }
+
         const formData = new FormData();
         formData.append('email', email.value);
         formData.append('nombre', nombre.value);
@@ -33,7 +46,7 @@ async function handleRegistro(event) {
 
         const response = await axios.post(`${url}/Registro`, formData);
         console.log(response.data);
-        location.replace("/client/Login.html")
+        location.replace("/client/Login.html");
         
     } catch (error) {
         console.error(error);
