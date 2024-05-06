@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
       loginForm.addEventListener("submit", function(event) {
         event.preventDefault(); 
   
-        var email = document.getElementById("email").value;
-        var password = document.getElementById("password").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
         
         axios.get("../../../server/admin.json")
           .then(function(response) {
-            var adminCredentials = response.data.admin;
+            let adminCredentials = response.data.admin;
             if (email === adminCredentials.email && password === adminCredentials.password) {
               location.replace("/client/Admin.html");
             } else {
